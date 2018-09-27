@@ -3,52 +3,501 @@
 <head>
 <meta charset="UTF-8">
 <title>The DeeJay Army Network</title>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-ul {
-    list-style-type: none;
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    font-family: Arial;
 }
 
-li {
-    float: left;
-    border-right:1px solid #bbb;
-}
-
-li:last-child {
-    border-right: none;
-}
-
-li a {
-    display: block;
+/* Style tab links */
+.tablink {
+    background-color: #555;
     color: white;
-    text-align: center;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
     padding: 14px 16px;
-    text-decoration: none;
+    font-size: 17px;
+    width: 25%;
 }
 
-li a:hover:not(.active) {
-    background-color: #111;
+.tablink:hover {
+    background-color: #777;
 }
 
-.active {
-    background-color: #4CAF50;
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: Black;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
 }
+
 </style>
 </head>
 <body>
 
+<button class="tablink" onclick="openPage('Home', this, '#')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, '#')">News</button>
+<button class="tablink" onclick="openPage('Twitch', this, '#')">Twitch</button>
+<button class="tablink" onclick="openPage('DeeJay_Bot Info', this, '#')">DeeJay_Bot Info</button>
 
-<ul>
-  <li><a href="Home">Home</a></li>
-  <li><a href="Twitch">Twitch</a></li>
-  <li><a href="DeeJay_Bot-info">DeeJay_Bot-info</a></li>
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
 
-</ul>
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Twitch" class="tabcontent">
+  <h3>Twitch</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="DeeJay_Bot Info" class="tabcontent">
+  <h3>DeeJay_Bot Info</h3>
+ <h3>Fun Time Commands</h3>
+
+<table style="width:50%">
+	
+  <tr>
+    <th>Commands</th>
+    <th>Permission</th>
+    <th>Cooldown</th>
+    <th>Cost</th>
+  </tr>
+	
+  <tr>
+    <td><li>!Lurk</li></td>
+    <td>Everyone</td>
+    <td>60Sec</td>
+    <td>20 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Followed</li></td>
+    <td>Everyone</td>
+    <td>60Sec</td>
+    <td>150 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Hours</li></td>
+    <td>Everyone</td>
+    <td>60Sec</td>
+    <td>25 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Rank</li></td>
+    <td>Everyone</td>
+    <td>60Sec</td>
+    <td>25 xp</td>
+  </tr>	
+</table>
+	
+	
+	
+<h3>Subsciber Commands</h3>
+
+<table style="width:50%">
+  <tr>
+    <th>Commands</th>
+    <th>Permission</th>
+    <th>Cooldown</th>
+    <th>Cost</th>
+  </tr>
+  <tr>
+    <td><li>!IP</li></td>
+    <td>Subsciber</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>	
+</table>	
+	
+
+			    
+<h3>Moderator Commands</h3>			    
+			    
+<table style="width:50%">
+  <tr>
+    <th>Commands</th>
+    <th>Permission</th>
+    <th>Cooldown</th>
+    <th>Cost</th>
+  </tr>
+  <tr>
+    <td><li>!Gaminhaven</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Battle-tag</li></td>
+    <td>Moderator</td>
+    <td>60Sec </td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Current-Hosts</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Discord</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Multistream</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Pack</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+	<td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!PG</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Rules</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Shoutout</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Steam-id</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+   <tr>
+    <td><li>!Tip</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+   <tr>
+    <td><li>!Uptime</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+   <tr>
+    <td><li>!Wishlist</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+   <tr>
+    <td><li>!Commands</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+   <tr>
+    <td><li>!Emotes</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+   <tr>
+    <td><li>!Resource-packs</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+   <tr>
+    <td><li>!Longest-cast</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+   <tr>
+    <td><li>!Social</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+   <tr>
+    <td><li>!nextsong</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!prime</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!share</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!song</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!strikes-system</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!sub</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!twitter</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+</table>
+
+	
+
+<h3>Twitch Edior Commands</h3>			    
+			    
+<table style="width:50%">
+  <tr>
+    <th>Commands</th>
+    <th>Permission</th>
+    <th>Cooldown</th>
+    <th>Cost</th>
+  </tr>
+  <tr>
+    <td><li>!Settitle</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>
+  <tr>
+    <td><li>!Setgame</li></td>
+    <td>Moderator</td>
+    <td>60Sec</td>
+    <td>0 xp</td>
+  </tr>	
+</table>
+	
+		
+	
+<h3>Bot soundboard</h3>
+
+<table style="width:50%">
+  <tr>
+    <th>Commands</th>
+    <th>Permission</th>
+    <th>Cooldown</th>
+    <th>Cost</th>
+  </tr>
+  <tr>
+    <td><li>!Air Raid</li></td>
+    <td>Everyone</td>
+    <td>60Sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!Doh</li></td>
+    <td>Everyone</td>
+    <td>60Sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!Double Kill</li></td>
+    <td>Everyone</td>
+    <td>60Sec</td>
+    <td>1000xp</td>
+  </tr>
+    <tr>
+    <td><li>!Gameover</li></td>
+    <td>Everyone</td>
+    <td>60Sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!GG</li></td>
+    <td>Everyone</td>
+    <td>60Sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!Goofy yell</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!Hey Listen</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!I can smell you</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!Imperial Alert</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!It Over 9000</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!Kill Bill</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!Looney Tunes</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!Nooo</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!Oh Hell No</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+    <tr>
+    <td><li>!pacman</li></td>
+    <td>Everyone</td>
+    <td>10mins</td>
+    <td>1548xp</td>
+  </tr>
+    <tr>
+    <td><li>!pineapples</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+  <tr>
+    <td><li>!Retard Alert</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+  <tr>
+    <td><li>!Return The Slab</li></td>
+    <td>Everyone</td>
+    <td>5mins</td>
+    <td>550xp</td>
+  </tr>
+  <tr>
+    <td><li>!Turret Thankyou</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+  <tr>
+    <td><li>!Undertakers Bell</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+  <tr>
+    <td><li>!Wyld Dead</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+  <tr>
+    <td><li>!Wyld Hello Game</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+  <tr>
+    <td><li>!Wyld Break MC</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+  <tr>
+    <td><li>!Wyld LOL</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+  <tr>
+    <td><li>!Wyld Real Sscience</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+  <tr>
+    <td><li>!Wyld Salty</li></td>
+    <td>Everyone</td>
+    <td>60sec</td>
+    <td>220xp</td>
+  </tr>
+</table>
+</div>
 
 
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
 
-<div style="padding:20px;margin-top:30px;background-color:;height:1500px;">
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
+
